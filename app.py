@@ -20,7 +20,9 @@ def get_db_connection():
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor,
         ssl=ssl_config                                           # Added SSL configuration
-    ) 
+    )
+
+    return connection
 
 
 @app.route('/health')
